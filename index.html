@@ -1,0 +1,124 @@
+// Variables
+$primary-color: #007bff;
+$secondary-color: #6c757d;
+$light-color: #f8f9fa;
+$dark-color: #343a40;
+// Head
+head {
+  title: "Название страницы";
+  meta(name='description', content='Описание страницы');
+  link(rel='stylesheet' href='style.css');
+}
+// Header
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $primary-color;
+  color: $light-color;
+  padding: 10px;
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  nav {
+    display: flex;
+    align-items: center;
+    ul {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      li {
+        margin-right: 20px;
+        a {
+          color: $light-color;
+          text-decoration: none;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+      .search {
+        margin-left: auto;
+        input[type="text"] {
+          padding: 5px;
+          border-radius: 5px;
+          border: none;
+        }
+        button {
+          margin-left: 10px;
+          padding: 5px;
+          border-radius: 5px;
+          border: none;
+          background-color: $secondary-color;
+          color: $light-color;
+          cursor: pointer;
+          &:hover {
+            background-color: darken($secondary-color, 20%);
+          }
+        }
+      }
+    }
+  }
+}
+// Footer
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $dark-color;
+  color: $light-color;
+  padding: 20px;
+  nav {
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      li {
+        margin-right: 20px;
+        a {
+          color: $light-color;
+          text-decoration: none;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+  .company-info {
+    display: flex;
+    flex-direction: column;
+    p {
+      margin: 0;
+    }
+    a {
+      margin-top: 10px;
+      color: $light-color;
+    }
+  }
+  .social-links {
+    display: flex;
+    a {
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+      background-color: $secondary-color;
+      margin-right: 10px;
+      border-radius: 50%;
+      font-size: 20px;
+      color: $light-color;
+      text-align: center;
+      line-height: 30px;
+      text-decoration: none;
+      &:hover {
+        background-color: darken($secondary-color, 20%);
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
